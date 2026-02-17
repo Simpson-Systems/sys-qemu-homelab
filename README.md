@@ -12,6 +12,12 @@
 - Grafana — dashboards and historical graphs  
 - Portainer — container management web UI
 
+
+## Unified / Single-Pane Tools
+
+- Netdata Cloud — centralized dashboard aggregating metrics from all Netdata agents/hosts  
+- Cockpit — web control panel for managing Linux systems (services, logs, terminals, networking)
+
 You can literally do all 4 in one weekend and your homelab instantly turns into a mini cloud environment.
 # Home-Cloud
 
