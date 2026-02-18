@@ -2,10 +2,30 @@ package main
 
 import (
 	"fmt"
+	"os/exec"
 )
 
 func main() {
 	fmt.Println("Hello")
-
+	get_vms()
 }
 
+func get_vms() {
+	app := "virsh"
+
+	// arg0 := "-e"
+	// arg1 := "Hello world"
+	// arg2 := "\n\tfrom"
+	// arg3 := "golang"
+
+	cmd := exec.Command(app)
+	stdout, err := cmd.Output()
+
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+
+	// Print the output
+	fmt.Println(string(stdout))
+}
