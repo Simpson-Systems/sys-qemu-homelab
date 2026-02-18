@@ -13,8 +13,8 @@ func main() {
 func get_vms() {
 	app := "virsh"
 
-	// arg0 := "-e"
-	// arg1 := "Hello world"
+	// arg0 := "list"
+	// arg1 := "--all"
 	// arg2 := "\n\tfrom"
 	// arg3 := "golang"
 
