@@ -1,0 +1,25 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: rust:1.76-bullseye
+
+    defaults:
+      run:
+        working-directory: vmctl
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install nightly
+        run: |
+          rustup toolchain install nightly
+          rustup default nightly
+
+      - run: rustc --version
+      - run: cargo build --release
+      - run: cargo test
